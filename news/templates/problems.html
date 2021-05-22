@@ -1,0 +1,19 @@
+
+  <table style="width:80%">
+    {% for problem in latest_problems %}
+    <tr>
+        <th>{{problem.description}}</th>
+        <th>{{problem.date_created}}</th>
+        <th>{{problem.status}}</th>
+        <th>{{problem.comment}}</th>
+      </tr>
+        
+    {% endfor %}
+  </table>
+
+  <style>
+      table, th, td {
+        border: 1px solid black;
+    }
+  </style>
+

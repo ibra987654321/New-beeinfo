@@ -1,0 +1,146 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+.login{
+    width: 100%;  
+    min-height: 100vh;
+    min-width: 328px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    font-family: Fira Sans;
+}
+
+.login__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 328px;
+}
+
+.login__title{
+    margin-bottom: 33px;
+}
+
+.login__row{
+    width: 100%;
+    min-width: 328px;
+    margin-bottom: 26px;
+    position: relative;
+}
+
+.login__input{
+    font-size: 18px;
+    color: #555555;
+    line-height: 1.2;
+    border: none;
+    border-bottom: 1px solid #CACACA;
+    display: block;
+    width: 100%;
+    min-height: 52px;
+    background: transparent;
+    outline: none;
+    padding: 0;
+    position: relative;
+}
+
+
+.login__span{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.login__span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 2px;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  
+    background: #FFE680;
+  }
+
+  .login__span::after {
+    font-family: Poppins-Medium;
+    font-size: 18px;
+    color: #909090;
+    line-height: 1.2;
+  
+    content: attr(data-placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    padding-left: 5px;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+
+  .login__input:focus + .login__span::after {
+    top: -10px;
+    font-size: 12px;
+    border: none;
+  }
+  
+  .login__input:focus + .login__span::before {
+    width: 100%;
+    border: none;
+  }
+
+  .has-val.login__input + .login__span::after {
+    top: -10px;
+    font-size: 12px;
+    border: none;
+  }
+  
+  .has-val.login__input + .login__span::before {
+    width: 100%;
+    border: none;
+  }
+
+  .login__btn{
+    width: 100%;
+    padding: 12px 0px;
+    background: #FFE680;
+    border-radius: 8px;
+    border: 1px solid #FFE680;
+    cursor: pointer;
+    color: #909090;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 144%;
+  }
+  .login__btn_active{
+    color: #000;
+  }
+
+  .login-error{
+    position: absolute;
+    right: 0;
+    top: -10%;
+    z-index: 2;
+  }
